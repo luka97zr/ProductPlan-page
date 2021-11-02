@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Kumbh+Sans:wght@400;700&display=swap');
+//Variables
+// ## Colors
+
+// ### Primary
+
+$moderate_cyan: hsl(176, 50%, 47%);
+$dark_cyan: hsl(176, 72%, 28%);
+$white : #fff;
+
+// ### Neutral
+
+$black: hsl(0, 0%, 0%);
+$dark_gray: hsl(0, 0%, 48%);
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clearfix{
+       clear: both;
+}
+a{
+    text-decoration: none;
+    color: $white;
+}
+li{
+    list-style-type: none;
+    color: $white;
+    cursor: pointer;
+    transition: border .2s ease;
+        &:hover{
+            border-bottom: 5px solid $dark_cyan;
+        }
+}
+body{
+    font-family: 'Commissioner', sans-serif;
+}
+html{
+    overflow-x: hidden;
+}
+
+//Header
+.header_hero--banner{
+    background: url('../images/image-hero-desktop.jpg') no-repeat center / cover;
+    height:60vh;
+}
+.navigation_top{
+    padding: 3% 0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation_gradient{
+    background: linear-gradient(to bottom, rgba(0,0,0,.6), transparent);
+
+}
+.navigation_menu{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    
+}
+
+//Main
+
+.main_card--container{
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -100px;
+    margin-bottom: 400px;
+        & > img{
+            position: absolute;
+            left: 50%;
+            top: -2%;
+            transform: translateX(-50%);
+        }
+}
+.card_first{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid $dark_gray;
+    background-color: $white;
+    border-radius: 15px;
+}
+.card_first--head{
+    text-align: center;
+    & h3{
+        padding-top:3em;
+        padding-bottom: 1.5em;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    & p{
+        color: $dark_gray;
+        font-size: 18px;
+        padding-bottom: 2em;
+    }
+}
+.card_first--bottom{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 2rem;
+        
+
+}
+button.btn_utility{
+    border: none;
+    background-color: $moderate_cyan;
+    color: $white;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 170px;
+    padding:1em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .2s ease;
+        &:hover{
+            box-shadow: 1px 3px 10px rgba(0,0,0,.5);
+        }
+}
+.bookmark{
+    display: flex;
+    align-items: center;
+        & span{
+            display: inline-block;
+            width: 160px;
+            background-color: $dark_gray;
+            padding:1.1em;
+            border-radius: 30px;
+            text-align: right;
+            position: relative;
+            cursor: pointer;
+            transition: color .3s ease;
+                &:hover{
+                    color: $white;
+                }
+        }
+        & img{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+}
+
+.card_second{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1.5px solid $dark_gray;
+    border-radius: 15px;
+        &--boxes{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+                & div{
+                    margin: 2rem 0;
+                    flex: 1;
+                    &:nth-of-type(2){
+                        border-right: 1px solid $dark_gray;
+                        border-left: 1px solid $dark_gray;
+                        text-align: center;
+                        flex: 1.2;
+
+                    }
+                    &:last-of-type{
+                        padding-left: 3em;
+                    }
+                    
+                    & span:nth-child(2),span:nth-child(1){
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+                    & span:last-child{
+                        font-size: 16px;
+                        color: $dark_gray;
+                    }
+                }
+        }
+}
+.progress_bar{
+    background-color: $dark_gray;
+    opacity: .6;
+    border-radius: 22px;
+    width: 80%;
+    height: 10px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    position: relative;
+        &--blue{
+            position: absolute;
+            height: 10px;
+            background-color: $dark_cyan;
+            width: 0%;
+            z-index: 1;
+            border-radius: 22px;
+        }
+}
+
+.card_third{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1.5px solid $dark_gray;
+    border-radius: 15px;
+    padding:2rem 0;
+        &--about{
+            & h3{
+                padding-bottom: 1.5em;
+            }
+            & p{
+                padding-bottom: 1.5em;
+                color: $dark_gray;
+                font-size: 16px;
+                line-height: 1.4em;
+            }
+            &.box_unique{
+                width: 80%;
+                padding: 2em 1em;
+                border-radius: 15px;
+                margin: 0 auto;
+            }
+        }
+}
+.box{
+    width: 80%;
+    padding: 2em 1em;
+    border-radius: 15px;
+    margin: 0 auto;
+        &:not(:first-of-type){
+            border:1.5px solid $dark_gray;
+        }
+        & h5{
+            float: left;
+            font-size: 19px;
+            font-weight: 700;
+        }
+        & .float_right{
+            float: right;
+            color: $moderate_cyan;
+            font-weight: 500;
+        }
+        & p{
+            padding: 2em 0;
+            color: $dark_gray;
+        }
+        &:nth-of-type(3){
+            margin: 2rem auto;
+        }
+        & .left{
+            font-size: 13px;
+            color: $dark_gray;
+            vertical-align: text-top;
+        }
+        & .num_bold{
+            font-size: 22px;
+            font-weight: 700;
+        }
+      
+}
+.program_first{
+    & span{
+        &:nth-of-type(2){
+            vertical-align: bottom;
+        }
+    }
+}
+.program_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.package.active{
+    opacity: .5;
+
+}
